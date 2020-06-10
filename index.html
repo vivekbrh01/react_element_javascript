@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task | Level 1 | React Element</title>
+	</head>
+	<body>
+		<!-- HTML Code Goes Here -->
+		<div id="root"></div>
+
+		<label>What are you learning?</label>
+		<input type="checkbox" />
+
+		<script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+		<script>
+			// JavaScript Code Goes Here
+			let heading = React.createElement(
+				"h1",
+				{ className: "heading" },
+				"Hello React 🔥",
+				React.createElement("input", { type: "checkbox" }),
+				React.createElement(
+					"div",
+					{ class: "Container" },
+					React.createElement("input", { type: "Checkbox" }),
+					React.createElement("p", null, "Learning react"),
+					React.createElement("span", null, "Delete")
+				),
+				React.createElement(
+					"div",
+					{ class: "Container" },
+					React.createElement(
+						"ul",
+						null,
+						React.createElement("li", null, "One"),
+						React.createElement("li", null, "Two"),
+						React.createElement("li", null, "Three")
+					)
+				)
+			);
+			ReactDOM.render(heading, document.getElementById("root"));
+		</script>
+	</body>
+</html>
